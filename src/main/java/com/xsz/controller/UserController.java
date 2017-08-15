@@ -2,9 +2,11 @@ package com.xsz.controller;
 
 import com.xsz.model.UserEntity;
 import com.xsz.service.UserService;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class UserController{
 
     @Resource
     private UserService userService;
@@ -26,4 +28,5 @@ public class UserController {
         model.addAttribute("userEntity",userEntity);
         return "showUser";
     }
+
 }
